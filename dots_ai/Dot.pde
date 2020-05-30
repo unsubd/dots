@@ -12,9 +12,6 @@ class Dot {
 
   float fitness;
   boolean isBest = false;
-
-  //int crossed = -1;
-  //int stepAt = -1;
   
   Dot(int gen, int index) {
     this.id = String.format("%d:%d", gen, index);

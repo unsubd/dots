@@ -48,7 +48,6 @@ class Population {  //<>//
 
     if (bestDot.reachedGoal && minStep > bestDot.brain.step) {
       minStep = bestDot.brain.step;
-      println("Min step" + minStep);
     }
   }
 
