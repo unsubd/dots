@@ -14,7 +14,8 @@ class Population {  //<>//
 
   void show() {
     for (int i=0; i<dots.length; i++)
-      dots[i].show();
+      if (dots[i].isBest || showAll)
+        dots[i].show();
   }
 
   void move() {

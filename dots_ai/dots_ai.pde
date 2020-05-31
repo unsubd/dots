@@ -1,6 +1,8 @@
 Population population;
 Obstacle[] obstacles;
 Goal goal;
+boolean showAll = true;
+
 void setup() {
   size(1000, 1000);
   population = new Population(1000);
@@ -33,4 +35,10 @@ void draw() {
   text("MinStep "+ (population.minStep > 1000 ? -1 : population.minStep), 20, 80);
   text("Best Dot " + population.bestDot.id, 20, 110);
   text("Best dot step " + population.bestDot.brain.step ,20,140);
+  
+  get(0,0,width,height).save("snap-" + System.nanoTime());
+}
+
+void mouseClicked(){
+  showAll = !showAll;
 }
